@@ -8,7 +8,7 @@ body {
   background-image: url('../img/fundo.jpg');
   background-size: auto 100vh;
   height: 100vh;
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   font-size: 12px;
 }
 
@@ -70,13 +70,54 @@ a:hover {
 
 .site-title {
   font-size: 4em;
+  font-family: 'Patrick Hand SC', cursive;
 }
 
 .site-subtitle {
   font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 1em;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh -4em -48px -1.5em);
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
-  width: 180px;
   height: 180px;
+  width: 240px;
+  object-fit: cover;
 }
